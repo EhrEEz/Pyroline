@@ -378,11 +378,9 @@ dist
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 
 ### react ###
-.DS_*
-**/*.backup.*
-**/*.back.*
-
-node_modules
+# .DS_*
+# **/*.backup.*
+# **/*.back.*
 
 *.sublime*
 
