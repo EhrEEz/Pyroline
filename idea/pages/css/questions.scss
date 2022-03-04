@@ -1,0 +1,107 @@
+$primary-dark: #6ecf56;
+$primary-color: #7cdf64;
+$background: #e7fffa;
+
+.question-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    .question-pocket {
+        outline: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 1em;
+
+        .bg-txt {
+            font-size: 0.9em;
+            font-weight: bold;
+            line-height: 1.6em;
+
+            .asked {
+                color: $primary-color;
+            }
+        }
+        .desc-txt {
+            font-size: 0.9em;
+            font-weight: 400;
+            line-height: 1.6em;
+            text-align: justify;
+        }
+
+        .note-footer {
+            .credit::before {
+                content: "Answered By - ";
+            }
+        }
+    }
+}
+
+.question-box {
+    .questions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6em;
+
+        li {
+            font-size: 0.85em;
+            font-weight: 600;
+
+            .asked {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.rt {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    position: relative;
+    .selected {
+        outline: 1px solid #555;
+        border-radius: 2px;
+        padding: 0.5em 1em;
+        font-size: 0.75em;
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+        letter-spacing: 0.2rem;
+        color: #555;
+        transition: 0.15s;
+    }
+    .selected:hover {
+        outline: 1px solid #000;
+        color: #000;
+    }
+
+    .ordering-options {
+        position: absolute;
+        top: 50%;
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        outline: 1px solid #ccc;
+        border-radius: 2px;
+        visibility: hidden;
+        color: #555;
+        opacity: 0;
+        transition: opacity 0.15s;
+        li {
+            padding: 0.5em;
+            font-size: 0.75em;
+            font-weight: 600;
+            line-height: 1.6em;
+            letter-spacing: 0.1rem;
+            text-transform: uppercase;
+            padding: 0.5em 1em;
+            cursor: pointer;
+        }
+        li:hover {
+            background: #efefef;
+        }
+    }
+    .selected:focus + .ordering-options {
+        visibility: visible;
+        opacity: 1;
+    }
+}

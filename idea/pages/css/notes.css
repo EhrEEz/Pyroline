@@ -1,0 +1,169 @@
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 100px 0;
+  gap: 1.5em;
+  width: 100%;
+}
+
+.main .navigator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: 1px solid #ccc;
+  border-radius: 2px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+  padding: 1em;
+}
+
+.main .navigator .navigator-heading {
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  margin: 0 0 0.5em 0;
+}
+
+.main .navigator .notes-navigator {
+  list-style-type: none;
+  font-size: 0.85em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 0.3em;
+}
+
+.main .navigator .notes-navigator li a {
+  font-size: 0.85em;
+  text-decoration: none !important;
+  color: #555;
+}
+
+.main .navigator .notes-navigator li a:hover {
+  text-decoration: underline !important;
+  color: #6ecf56;
+}
+
+.main .navigator .notes-navigator .active a {
+  color: #6ecf56 !important;
+  -webkit-text-decoration: underline dashed !important;
+          text-decoration: underline dashed !important;
+}
+
+.main .navigator .notes-navigator .active a:hover {
+  -webkit-text-decoration: underline dashed !important;
+          text-decoration: underline dashed !important;
+}
+
+.main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5em;
+  border-radius: 2px;
+  outline: 1px solid #ccc;
+  padding: 3em;
+  width: 70%;
+}
+
+.main .content .big-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .content .big-title .rt svg {
+  cursor: pointer;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+}
+
+.main .content .big-title .rt svg:hover {
+  fill: #7cdf64;
+  stroke: #7cdf64;
+}
+
+.main .content .big-title h3 {
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+}
+
+.main .content .big-title .link-ln a {
+  color: #6ecf56;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+}
+
+.main .content .big-title .link-ln a:hover {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+.main .content .note-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+
+.main .content .note-content .note-pocket h5 {
+  font-size: 0.9em;
+  font-weight: bold;
+  line-height: 1.6em;
+  text-transform: uppercase;
+}
+
+.main .content .note-content .note-pocket p {
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.6em;
+  text-align: justify;
+}
+
+.main .content .note-footer .credit {
+  color: #555;
+  font-size: 0.75em;
+  padding: 1em 0;
+}
+
+.main .content .note-footer .credit::before {
+  content: "Written By - ";
+}
+/*# sourceMappingURL=notes.css.map */

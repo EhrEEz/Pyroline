@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Register</title>
+    </head>
+    <body>
+        <section class="register">
+            <div class="main-form">
+                <div class="form-cntr">
+                    <h3 class="hero">Sign Up</h3>
+                    <form action="#" method="post" onsubmit="submitHandler(event)">
+                        <div class="input-container">
+                            <label for="phone"> Phone Number </label>
+                            <input
+                                type="text"
+                                id="phone"
+                                class=""
+                                onfocus="focusHandler(event, this)"
+                                onblur="blurHandler(event, this)"
+                            />
+                        </div>
+                        <div class="input-container">
+                            <label for="fullname"> Full Name </label>
+                            <input
+                                type="text"
+                                id="fullname"
+                                class=""
+                                onfocus="focusHandler(event, this)"
+                                onblur="blurHandler(event, this)"
+                            />
+                        </div>
+                        <div class="input-container">
+                            <label for="stream"> Stream </label>
+                            <input
+                                type="text"
+                                id="stream"
+                                class=""
+                                onfocus="focusHandler(event, this)"
+                                onblur="blurHandler(event, this)"
+                            />
+                        </div>
+                        <div class="input-container">
+                            <label for="password"> Password </label>
+                            <input
+                                type="password"
+                                id="password"
+                                class=""
+                                onfocus="focusHandler(event, this)"
+                                onblur="blurHandler(event, this)"
+                            />
+                        </div>
+                        <div class="input-container">
+                            <label for="cpassword"> Confirm Password </label>
+                            <input
+                                type="password"
+                                id="cpassword"
+                                class=""
+                                onfocus="focusHandler(event, this)"
+                                onblur="blurHandler(event, this)"
+                            />
+                        </div>
+                        <div id="shopwd">
+                            Show Password
+                            <label class="switch">
+                                <input
+                                    type="checkbox"
+                                    name="showpassword"
+                                    id="showpassword"
+                                    onchange="passwordCheckClicked(event, this)"
+                                />
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="btn-grp">
+                            <button
+                                class="gn-ot-btn"
+                                onclick="event.preventDefault();window.location.href = './login.html'"
+                            >
+                                Login
+                            </button>
+                            <button type="submit" id="change">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="display-panel">
+                    <div class="display-text">
+                        <h3>Pyroline MemberG</h3>
+                        <p>Get ready to make college a lot easier</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="./index.js"></script>
+        <script>
+            var inputs = document.getElementsByClassName("input-container");
+            for (input of inputs) {
+                if (input.children[1].type == "password") {
+                    input.children[1].value = "";
+                }
+                if (input.children[1].value != "" || input.children[1].value == null) {
+                    input.children[0].classList.add("active");
+                    input.children[1].classList.add("bor");
+                }
+            }
+        </script>
+    </body>
+</html>
